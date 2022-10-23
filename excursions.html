@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Наши экскурсии</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20221023154148">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll="124" data-scroll-show class="header">
+			<div class="header__container">
+				<a href="index.html" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
+							<li class="menu__item"><a href="excursions.html" class="menu__link">Экскурсии</a></li>
+							<li class="menu__item"><a href="cabinet.html" class="menu__link">Личный кабинет</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section data-prlx-parent class="our-excursions">
+				<div class="our-excursions__container">
+					<h1 class="our-excursions__title">НАШИ ЭКСКУРСИИ</h1>
+				</div>
+				<picture><source srcset="img/excursions/our-excursions/image-bg.webp" type="image/webp"><img data-prlx src="img/excursions/our-excursions/image-bg.jpg" alt="image" class="image-parallax"></picture>
+			</section>
+			<div data-tabs class="tabs-our-excursions">
+				<div class="tabs-our-excursions__container">
+					<div class="tabs-our-excursions__control">
+						<nav data-tabs-titles class="tabs-our-excursions__navigation">
+							<button type="button" class="tabs-our-excursions__title _tab-active">АВТОБУСНЫЙ ТУР</button>
+							<button type="button" class="tabs-our-excursions__title">Джиппинг</button>
+							<button type="button" class="tabs-our-excursions__title">ЯХТИНГ</button>
+							<button type="button" class="tabs-our-excursions__title">КАНЬОНИНГ</button>
+						</nav>
+						<form action="#" method="#" class="tabs-our-excursions__form form-our-excursions">
+							<div class="form-our-excursions__select input-book">
+								<select name="form[]" data-class-modif="form" id="location">
+									<option data-class="location-option" value="Абхазия" selected>Абхазия</option>
+									<option data-class="location-option" value="Красная поляна">Красная поляна</option>
+									<option data-class="location-option" value="Сочи">Сочи</option>
+									<option data-class="location-option" value="Адлер">Адлер</option>
+								</select>
+								<label for="location" class="input-book__lable input-book__lable_absolute _icon-location"></label>
+							</div>
+							<div class="form-our-excursions__input input-book">
+								<input data-same-date autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Дата" class="input-book__inp datepicker" id="datepicker">
+								<label for="datepicker" class="input-book__lable _icon-calendar"></label>
+							</div>
+							<div class="form-our-excursions__select input-book">
+								<select data-scroll name="form[]" data-class-modif="form" id="countOfPeople">
+									<option data-class="people-option" value="1 человек" selected>1 человек</option>
+									<option data-class="people-option" value="2 человека">2 человека</option>
+									<option data-class="people-option" value="3 человека">3 человека</option>
+									<option data-class="people-option" value="4 человека">4 человека</option>
+									<option data-class="people-option" value="5 человек">5 человек</option>
+									<option data-class="people-option" value="6 человек">6 человек</option>
+									<option data-class="people-option" value="7 человек">7 человек</option>
+									<option data-class="people-option" value="8 человек">8 человек</option>
+									<option data-class="people-option" value="9 человек">9 человек</option>
+									<option data-class="people-option" value="10 человек">10 человек</option>
+									<option data-class="people-option" value="Больше 10 человек">Больше 10 человек</option>
+								</select>
+								<label for="countOfPeople" class="input-book__lable input-book__lable_absolute _icon-persons"></label>
+							</div>
+							<button data-change-button type="button" class="form-our-excursions__button button">Показать</button>
+						</form>
+					</div>
+					<div class="tabs-our-excursions__block">
+						<aside class="tabs-our-excursions__filters filters-excursions">
+							<h4 class="filters-excursions__title">Фильтры</h4>
+							<form action="#" method="#">
+								<div data-spollers class="filters-excursions__spollers spollers-filters">
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Стоимость</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters__price-range">
+												<input autocomplete="off" type="text" class="spollers-filters__input" id="price-start">
+												<input autocomplete="off" type="text" class="spollers-filters__input" id="price-end">
+											</div>
+											<div id="range"></div>
+										</div>
+									</div>
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Количество человек</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters-options">
+												<div class="spollers-filters-options__item">
+													<input id="onePerson" class="spollers-filters-options__input" checked type="radio" value="1 человек" name="people">
+													<label for="onePerson" class="spollers-filters-options__label"><span class="spollers-filters-options__text">1 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="twoPersons" class="spollers-filters-options__input" type="radio" value="2 человека" name="people">
+													<label for="twoPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">2 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="threePersons" class="spollers-filters-options__input" type="radio" value="3 человека" name="people">
+													<label for="threePersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">3 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="fourPersons" class="spollers-filters-options__input" type="radio" value="4 человека" name="people">
+													<label for="fourPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">4 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="fivePersons" class="spollers-filters-options__input" type="radio" value="5 человек" name="people">
+													<label for="fivePersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">5 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="sixPersons" class="spollers-filters-options__input" type="radio" value="6 человек" name="people">
+													<label for="sixPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">6 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="sevenPersons" class="spollers-filters-options__input" type="radio" value="7 человек" name="people">
+													<label for="sevenPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">7 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="eightPersons" class="spollers-filters-options__input" type="radio" value="8 человек" name="people">
+													<label for="eightPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">8 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="ninePersons" class="spollers-filters-options__input" type="radio" value="9 человек" name="people">
+													<label for="ninePersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">9 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="tenPersons" class="spollers-filters-options__input" type="radio" value="10 человек" name="people">
+													<label for="tenPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">10 чел.</span></label>
+												</div>
+												<div class="spollers-filters-options__item spollers-filters-options__item_big">
+													<input id="moreThanTenPeople" class="spollers-filters-options__input" type="radio" value="Больше 10 человек" name="people">
+													<label for="moreThanTenPeople" class="spollers-filters-options__label"><span class="spollers-filters-options__text">Больше 10 чел.</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Место</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters__options options">
+												<div class="options__item">
+													<input id="abkhazia" class="options__input" checked type="radio" value="Абхазия" name="location">
+													<label for="abkhazia" class="options__label"><span class="options__text">Абхазия</span></label>
+												</div>
+												<div class="options__item">
+													<input id="krasnaya-polyana" class="options__input" type="radio" value="Красная поляна" name="location">
+													<label for="krasnaya-polyana" class="options__label"><span class="options__text">Красная поляна</span></label>
+												</div>
+												<div class="options__item">
+													<input id="sochi" class="options__input" type="radio" value="Сочи" name="location">
+													<label for="sochi" class="options__label"><span class="options__text">Сочи</span></label>
+												</div>
+												<div class="options__item">
+													<input id="adler" class="options__input" type="radio" value="Адлер" name="location">
+													<label for="adler" class="options__label"><span class="options__text">Адлер</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Длительность</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters-options">
+												<div class="spollers-filters-options__item">
+													<input id="hourAndHalf" class="spollers-filters-options__input" checked type="radio" value="1,5 часа" name="time">
+													<label for="hourAndHalf" class="spollers-filters-options__label"><span class="spollers-filters-options__text">1,5 часа</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="twoAndHalfHours" class="spollers-filters-options__input" type="radio" value="2,5 часа" name="time">
+													<label for="twoAndHalfHours" class="spollers-filters-options__label"><span class="spollers-filters-options__text">2,5 часа</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="fourHours" class="spollers-filters-options__input" type="radio" value="4 часа" name="time">
+													<label for="fourHours" class="spollers-filters-options__label"><span class="spollers-filters-options__text">4 часа</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="sixHours" class="spollers-filters-options__input" type="radio" value="6 часов" name="time">
+													<label for="sixHours" class="spollers-filters-options__label"><span class="spollers-filters-options__text">6 часов</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Дата</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters__datepicker input-book">
+												<input data-same-date autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Дата" class="input-book__inp datepicker" id="datepickerTwo">
+												<label for="datepickerTwo" class="input-book__lable _icon-calendar"></label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="filters-excursions__bottom">
+									<button data-change-button type="button" class="filters-excursions__button button">Показать</button>
+									<button type="reset" class="filters-excursions__reset">Сбросить фильтры</button>
+								</div>
+							</form>
+						</aside>
+						<div class="tabs-our-excursions__box">
+							<h2 class="tabs-our-excursions__main-title">Наши туры</h2>
+							<div data-tabs-body class="tabs-our-excursions__content">
+								<div class="tabs-our-excursions__body body-tabs-excursions">
+									<div class="body-tabs-excursions__items">
+										<article data-price="1618" data-duration="2,5 часа" data-persons="10 человек" data-location="Красная поляна" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Автобусный тур</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Красная поляна</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 618 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="3250" data-duration="1,5 часа" data-persons="8 человек" data-location="Абхазия" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Автобусный тур</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Абхазии (из Адлера)</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 250 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 312 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="4800" data-duration="4 часа" data-persons="7 человек" data-location="Абхазия" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Автобусный тур</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Абхазии (из Адлера)</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 800 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 200 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">4 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="6512" data-duration="1,5 часа" data-persons="8 человек" data-location="Абхазия" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Автобусный тур</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Абхазии (из Адлера)</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 512 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 312 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="6214" data-duration="6 часов" data-persons="8 человек" data-location="Абхазия" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Автобусный тур</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Абхазии (из Адлера)</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 214 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 327 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">6 часов</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="1618" data-duration="2,5 часа" data-persons="Больше 10 человек" data-location="Сочи" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Автобусный тур</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Сочи</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 618 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="tabs-our-excursions__body body-tabs-excursions">
+									<div class="body-tabs-excursions__items">
+										<article data-price="1732" data-duration="1,5 часа" data-persons="4 человека" data-location="Сочи" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image2.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Джиппинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Сочи</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 732 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 212 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="5234" data-duration="4 часа" data-persons="3 человека" data-location="Абхазия" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image2.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Джиппинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Абхазии (из Адлера)</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">5 234 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 768 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">4 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="768" data-duration="1,5 часа" data-persons="5 человек" data-location="Адлер" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image2.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Джиппинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Адлера</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">768 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">457 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="2380" data-duration="2,5 часа" data-persons="10 человек" data-location="Красная поляна" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Джиппинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Красная поляна</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">2380 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="6512" data-duration="1,5 часа" data-persons="8 человек" data-location="Абхазия" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Джиппинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Абхазии (из Адлера)</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 512 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 312 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="tabs-our-excursions__body body-tabs-excursions">
+									<div class="body-tabs-excursions__items">
+										<article data-price="2351" data-duration="6 часов" data-persons="6 человек" data-location="Адлер" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Яхтинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Адлера</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">2 351 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 798 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">6 часов</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="6512" data-duration="1,5 часа" data-persons="8 человек" data-location="Абхазия" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Яхтинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Абхазии (из Адлера)</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 512 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 312 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="1120" data-duration="2,5 часа" data-persons="10 человек" data-location="Красная поляна" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Яхтинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Красная поляна</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 120 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="1618" data-duration="4 часа" data-persons="10 человек" data-location="Красная поляна" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Яхтинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Красная поляна</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 618 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">4 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="5432" data-duration="6 часов" data-persons="Больше 10 человек" data-location="Абхазия" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Яхтинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Абхазии (из Адлера)</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">5 432 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 213 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">6 часов</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="3768" data-duration="2,5 часа" data-persons="10 человек" data-location="Красная поляна" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Яхтинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Красная поляна</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 768 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="tabs-our-excursions__body body-tabs-excursions">
+									<div class="body-tabs-excursions__items">
+										<article data-price="1618" data-duration="2,5 часа" data-persons="2 человека" data-location="Красная поляна" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Каньонинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Красная поляна</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 618 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="2318" data-duration="4 часа" data-persons="1 человек" data-location="Адлер" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Каньонинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Адлера</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">2 318 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 712 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">4 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="3618" data-duration="2,5 часа" data-persons="3 человека" data-location="Абхазия" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Каньонинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Абхазии (из Адлера)</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 618 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 212 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="4239" data-duration="6 часов" data-persons="4 человека" data-location="Сочи" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Каньонинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Сочи</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 239 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 926 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">6 часов</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="2618" data-duration="2,5 часа" data-persons="2 человека" data-location="Красная поляна" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Каньонинг</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Золотое кольцо Красная поляна</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">2 618 $</div>
+															<div class="prices-list__text">Взрослый билет</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Детский билет</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2,5 часа</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">Подробнее</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+							<ul class="tabs-our-excursions__pages">
+								<li class="tabs-our-excursions__page"><a href="excursion.html" class="tabs-our-excursions__previous-page _icon-select-arrow"></a></li>
+								<li class="tabs-our-excursions__page tabs-our-excursions__page_active"><a href="excursion.html">1</a></li>
+								<li class="tabs-our-excursions__page"><a href="excursion.html">2</a></li>
+								<li class="tabs-our-excursions__page">...</li>
+								<li class="tabs-our-excursions__page"><a href="excursion.html">5</a></li>
+								<li class="tabs-our-excursions__page"><a href="excursion.html" class="tabs-our-excursions__next-page _icon-select-arrow"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__left-column">
+					<img src="img/colorful-logo.svg" alt="logo" class="footer__logo">
+					<nav data-da=".footer__right-column, 767, 0" class="footer__menu menu-footer">
+						<ul class="menu-footer__list">
+							<li class="menu-footer__item"><a href="index.html" class="menu-footer__link">Главная</a></li>
+							<li class="menu-footer__item"><a href="excursions.html" class="menu-footer__link">Экскурсии</a></li>
+							<li class="menu-footer__item"><a href="#" class="menu-footer__link">Личный кабинет</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__right-column">
+					<ul class="footer__contacts contacts-footer">
+						<li class="contacts-footer__item"><a href="tel:+380000000000" class="contacts-footer__link _icon-whatsapp">+38 000 000 00 00</a></li>
+						<li class="contacts-footer__item"><a href="tel:+381111111111" class="contacts-footer__link _icon-telegram">+38 111 111 11 11</a></li>
+						<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-telegram">Телеграм-бот PeroTravel</a></li>
+					</ul>
+					<div class="footer__block">
+						<a data-da=".contacts-footer, 767, 4" href="#" class="footer__email _icon-mail">office@perotravel.com</a>
+						<div data-da=".footer__left-column, 767, 2" class="footer__social social-footer">
+							<a href="https://instagram.com" class="social-footer__item _icon-instagram"></a>
+							<a href="https://facebook.com" class="social-footer__item _icon-facebook"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+				<div class="popup__text">
+					Заявка успешно отправлена!
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20221023154148"></script>
+</body>
+
+</html>
